@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Tp7LabI">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="tp7labi" visibility="public" xPosition="-6.0" yPosition="10.0">
+      <Fields>
+        <Field name="legajo" type="int" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="materias" type="ArrayList&lt;Materia&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="legajo"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLegajo" returnType="int" visibility="public"/>
+        <Method name="setLegajo" returnType="void" visibility="public">
+          <Argument type="int" name="legajo"/>
+        </Method>
+        <Method name="getMaterias" returnType="ArrayList&lt;Materia&gt;" visibility="public"/>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="agregarMateria" returnType="void" visibility="public">
+          <Argument type="Materia" name="m"/>
+        </Method>
+        <Method name="cantidadMaterias" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Colegio" package="tp7labi" visibility="public" xPosition="492.0" yPosition="39.0">
+      <Fields>
+        <Field name="materias" type="LinkedHashMap&lt;Integer, Materia&gt;" visibility="private" isStatic="true"/>
+        <Field name="alumnos" type="LinkedHashMap&lt;Integer, Alumno&gt;" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getMaterias" returnType="LinkedHashMap&lt;Integer, Materia&gt;" visibility="public" isStatic="true"/>
+        <Method name="getAlumnos" returnType="LinkedHashMap&lt;Integer, Alumno&gt;" visibility="public" isStatic="true"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Materia" package="tp7labi" visibility="public" xPosition="940.0" yPosition="77.0">
+      <Fields>
+        <Field name="idMateria" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="idMateria"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="anio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdMateria" returnType="int" visibility="public"/>
+        <Method name="setIdMateria" returnType="void" visibility="public">
+          <Argument type="int" name="idMateria"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getAnio" returnType="int" visibility="public"/>
+        <Method name="setAnio" returnType="void" visibility="public">
+          <Argument type="int" name="anio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="tp7labi.vistas" visibility="public" xPosition="-6.0" yPosition="388.0">
+      <Fields>
+        <Field name="escritorio" type="javax.swing.JDesktopPane" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jmFormularios" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmSalir" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmiFormAlumnos" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiFormInscripcion" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiFormMaterias" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiSalirDelSistema" type="javax.swing.JMenuItem" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jmiFormMateriasActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiSalirDelSistemaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiFormAlumnosActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiFormInscripcionActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ViewFormAlumnos" package="tp7labi.vistas" visibility="public" xPosition="679.0" yPosition="388.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jbGuardar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbNuevo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbSalir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jtfApellido" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfLegajo" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfNombre" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jbSalirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbNuevoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbGuardarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ViewFormInscripcion" package="tp7labi.vistas" visibility="public" xPosition="1260.0" yPosition="20.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jbInscribir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbSalir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jcbAlumno" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jcbMateria" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jbSalirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbInscribirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jcbMateriaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jcbAlumnoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ViewFormMaterias" package="tp7labi.vistas" visibility="public" xPosition="1406.0" yPosition="378.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jbGuardarCambios" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbNuevo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbSalir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jtfAnio" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfIdMateria" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfNombre" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jbSalirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbNuevoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbGuardarCambiosActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="alumnos" source="tp7labi.Colegio" target="tp7labi.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="LinkedHashMap&lt;Integer, Alumno&gt;"/>
+    <UseRelation source="tp7labi.Colegio" target="tp7labi.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="materias" source="tp7labi.Colegio" target="tp7labi.Materia" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="LinkedHashMap&lt;Integer, Materia&gt;"/>
+    <UseRelation source="tp7labi.Colegio" target="tp7labi.Materia" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tp7labi.Alumno" target="tp7labi.Materia" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="materias" source="tp7labi.Alumno" target="tp7labi.Materia" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Materia&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
