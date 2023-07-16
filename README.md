@@ -1,3 +1,5 @@
+Universidad de La Punta
+Laboratorio de Programación 1
 # Tp7LabI
 
 Un Alumno tiene un nro de legajo, un apellido, un nombre y una lista de materias en las
